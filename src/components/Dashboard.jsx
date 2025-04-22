@@ -1,8 +1,6 @@
-// src/components/Dashboard.jsx
-
 import React, { useState } from 'react';
 import MovieCard from './MovieCard';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom'; // Import Link for navigation
 import './Dashboard.css'; // Optional: Import CSS for styling
 
 const Dashboard = () => {
@@ -35,6 +33,10 @@ const Dashboard = () => {
     <div className="dashboard">
       <header className="dashboard-header">
         <h1>Movie Collection</h1>
+        {/* Add Movie Button */}
+        <Link to="/add-movie" className="add-movie-button">
+          Add New Movie
+        </Link>
       </header>
       <div className="movie-list">
         {movies.map((movie) => (
